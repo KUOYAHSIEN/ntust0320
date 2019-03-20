@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>Input your grade and click the button:</h2>
+
+<input id="grade" value="60" />
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var age, voteable;
+  age = Number(document.getElementById("grade").value);
+  if (isNaN(age)) {
+    voteable = "Input is not a grade";
+  } else {
+    voteable = (age < 60) ? "fail!!!" : "Gooood~~~";
+  }
+  document.getElementById("demo").innerHTML = voteable;
+}
+</script>
+
+</body>
+</html>

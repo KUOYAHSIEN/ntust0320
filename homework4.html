@@ -1,0 +1,24 @@
+<html>
+ <head> 
+ 	<title>Canvas Animation</title> 
+ 	<meta http-equiv="content-type" content="text/html;charset=utf-8"> </head> 
+ 	<body> <canvas id="canvas" width="200" height="200"></canvas> 
+ 		<script> var canvas = document.getElementById("canvas"); var ctx = canvas.getContext("2d"); var position = 0; 
+ 		setInterval(function(){  
+ 			ctx.clearRect(0,0,200,200); 
+
+ 			var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+
+
+
+
+
+ 		 ctx.fillRect(position,0,20,20); position++; 
+ 		 if(position>200){ position=0; } },30); 
+ 		</script> </body></html> 
